@@ -166,12 +166,16 @@
       <h2 style="margin:0 0 14px">اینستاگرام</h2>
       <p class="muted">ما را در اینستاگرام با شناسه <strong>@kermanpeople</strong> دنبال کنید.</p>
       <div class="instagram-embed">
-        <!-- روش ۱: کد رسمی اینستاگرام برای یک پست یا پروفایل را اینجا Paste کنید. (Instagram → … → Embed) -->
-        <!-- روش ۲: اگر می‌خواهید گالری خودکار داشته باشید، از سرویس‌هایی مثل LightWidget یا EmbedSocial کد iframe بدهید و در src جایگزین کنید. -->
-        <iframe title="Instagram feed" src="" loading="lazy" allowtransparency="true"></iframe>
-        <p class="muted">اگر فعلاً کد ندارید، دکمه زیر به پروفایل می‌برد:</p>
-        <p><a class="btn" href="https://www.instagram.com/kermanpeople/" target="_blank" rel="noopener">مشاهده صفحه اینستاگرام</a></p>
+        <!-- اگر پست خاصی می‌خوای، لینک همون پست رو بذار جای آدرس پروفایل -->
+        <blockquote class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/kermanpeople/"
+          data-instgrm-version="14"
+          style="margin:0 auto;max-width:540px;width:100%"></blockquote>
+      
+        <!-- مهم: این اسکریپت باید باشه تا بلاک‌کوت به embed تبدیل بشه -->
+        <script data-cfasync="false" async src="https://www.instagram.com/embed.js"></script>
       </div>
+      
     </section>
 
     <!-- Contact -->

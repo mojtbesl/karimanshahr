@@ -8,8 +8,8 @@
   <meta property="og:title" content="کریمانشهر | Karimanshahr" />
   <meta property="og:description" content="روایت سبک زندگی مردم کرمان." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://emojiapi.dev/api/v1/sun_behind_small_cloud.svg" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%8C%9E%3C/text%3E%3C/svg%3E" />
+  <meta property="og:image" content="logo.png" />
+  <link rel="icon" href="logo.png" type="image/png" />
 
   <!-- Fonts: Vazirmatn (Persian), Inter (Latin) -->
   <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn/Vazirmatn-font-face.css" rel="stylesheet" />
@@ -17,18 +17,19 @@
 
   <style>
     :root{
-      --bg:#0d0f14;
-      --fg:#e9eef5;
-      --muted:#b9c2cf;
-      --brand:#00d2a8;
-      --glass:rgba(255,255,255,.06);
-      --border:rgba(255,255,255,.08);
-      --shadow:0 10px 30px rgba(0,0,0,.35);
+      /* Karimanshahr palette: deep blue, white, gold */
+      --bg:#0a1d5a;           /* deep blue from logo */
+      --fg:#ffffff;           /* white */
+      --muted:#cbd3eb;        /* soft desaturated blue */
+      --brand:#d4a82a;        /* gold */
+      --glass:rgba(255,255,255,.05);
+      --border:rgba(255,255,255,.12);
+      --shadow:0 10px 30px rgba(0,0,0,.45);
     }
     *{box-sizing:border-box}
     html,body{height:100%;scroll-behavior:smooth}
     body{
-      margin:0;background:radial-gradient(1200px 800px at 80% -20%, #1b2333 10%, var(--bg) 60%), var(--bg);
+      margin:0;background:radial-gradient(1200px 800px at 80% -20%, #0f2a66 10%, var(--bg) 60%), var(--bg);
       color:var(--fg); font-family:'Vazirmatn', Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       overflow-x:hidden;
     }
@@ -45,6 +46,7 @@
     .grow{flex:1}
     .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid var(--border);background:var(--glass);border-radius:14px}
     .btn:hover{border-color:#2a3347}
+    .logo-img{width:40px;height:40px;border-radius:50%;object-fit:cover}
 
     /* Hero */
     #hero{position:relative;min-height:100svh;display:grid;place-items:center}
@@ -53,7 +55,7 @@
     h1{font-size:clamp(32px,5vw,64px);margin:0 0 8px;line-height:1.06;letter-spacing:-.5px}
     .subtitle{font-size:clamp(16px,2.2vw,20px);color:var(--muted)}
     .cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:10px}
-    .cta .primary{background:linear-gradient(135deg, var(--brand), #58ffc6); color:#05130f; font-weight:800;border:none}
+    .cta .primary{background:linear-gradient(135deg, var(--brand), #f1d36b); color:#1d1405; font-weight:800;border:none}
 
     /* Sections */
     section{max-width:1100px;margin:auto;padding:80px 16px}
@@ -64,6 +66,8 @@
 
     .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
     .ph{aspect-ratio:4/3;border-radius:16px;border:1px dashed var(--border);display:grid;place-items:center;color:#7b8597;background:rgba(255,255,255,.02)}
+    .instagram-embed{background:var(--glass);border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+    .instagram-embed iframe{width:100%;min-height:420px;border:0;border-radius:12px}
 
     footer{border-top:1px solid var(--border);background:rgba(255,255,255,.02)}
     .foot{max-width:1100px;margin:auto;padding:32px 16px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between}
@@ -78,7 +82,7 @@
   <header>
     <nav class="nav">
       <div class="logo" aria-label="کریمانشهر">
-        <span style="font-size:22px">🟢</span>
+        <img class="logo-img" src="logo.png" alt="لوگو کریمانشهر">
         <span>کریمانشهر</span>
         <span class="badge">Karimanshahr</span>
       </div>
@@ -87,6 +91,7 @@
         <a class="btn" href="#about">درباره</a>
         <a class="btn" href="#themes">موضوعات</a>
         <a class="btn" href="#contact">ارتباط</a>
+        <a class="btn" href="#instagram">اینستاگرام</a>
       </div>
     </nav>
   </header>
@@ -156,6 +161,19 @@
       </div>
     </section>
 
+    <!-- Instagram -->
+    <section id="instagram">
+      <h2 style="margin:0 0 14px">اینستاگرام</h2>
+      <p class="muted">ما را در اینستاگرام با شناسه <strong>@kermanpeople</strong> دنبال کنید.</p>
+      <div class="instagram-embed">
+        <!-- روش ۱: کد رسمی اینستاگرام برای یک پست یا پروفایل را اینجا Paste کنید. (Instagram → … → Embed) -->
+        <!-- روش ۲: اگر می‌خواهید گالری خودکار داشته باشید، از سرویس‌هایی مثل LightWidget یا EmbedSocial کد iframe بدهید و در src جایگزین کنید. -->
+        <iframe title="Instagram feed" src="" loading="lazy" allowtransparency="true"></iframe>
+        <p class="muted">اگر فعلاً کد ندارید، دکمه زیر به پروفایل می‌برد:</p>
+        <p><a class="btn" href="https://www.instagram.com/kermanpeople/" target="_blank" rel="noopener">مشاهده صفحه اینستاگرام</a></p>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact">
       <div class="cards">
@@ -202,7 +220,7 @@
       // A low‑poly rotating sphere as a gentle "planet desert" metaphor
       const sphereGeo = new THREE.IcosahedronGeometry(1.4, 2);
       const sphereMat = new THREE.MeshStandardMaterial({
-        color: 0x1a9e7d, metalness: 0.1, roughness: 0.8, flatShading: true
+        color: 0xd4a82a, metalness: 0.1, roughness: 0.8, flatShading: true
       });
       const sphere = new THREE.Mesh(sphereGeo, sphereMat);
       sphere.position.y = -0.2;
